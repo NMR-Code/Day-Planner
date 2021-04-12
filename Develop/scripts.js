@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    //Setting up the date and appending to the HTML page
     var today = moment().format('MMMM Do YYYY');
     console.log(today)
     $(".todaysDate").append(today);
@@ -18,7 +17,6 @@ $(document).ready(function() {
     var $text4PM = $("#text4PM");
     var $text5PM = $("#text5PM");
 
-
     $("textarea").each(function() {
         var name = parseInt($(this).attr("name"));
         if (name < now) {
@@ -34,13 +32,10 @@ $(document).ready(function() {
             $(this).addClass("bg-red")
         }
 
-
-
     })
 
     $("button").on("click", function() {
 
-        //setting items in the local storage
         localStorage.setItem("9AM", ($text9AM.val()))
         localStorage.setItem("10AM", ($text10AM.val()))
         localStorage.setItem("11AM", ($text11AM.val()))
@@ -53,7 +48,6 @@ $(document).ready(function() {
 
     })
 
-    //getting the content stored and sending to the screen. When page is refreshed content will stay
     $("#text9AM").append(localStorage.getItem("9AM"));
     $("#text10AM").append(localStorage.getItem("10AM"));
     $("#text11AM").append(localStorage.getItem("11AM"));

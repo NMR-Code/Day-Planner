@@ -83,9 +83,7 @@ textarea {
 }
 
 
-/* 
-These rules take effect when the browser's width
-  is either 767px or less. */
+/* Media Queries */
 
 @media screen and (max-width: 767px) {
     .jumbotron {
@@ -95,12 +93,6 @@ These rules take effect when the browser's width
         font-size: smaller;
     }
 }
-
-
-/*
-  These rules take effect when the browser's width
-  is either 400px or less.
-*/
 
 @media screen and (max-width: 400px) {
     .jumbotron {
